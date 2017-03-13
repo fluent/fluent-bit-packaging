@@ -1,6 +1,6 @@
 # Fluent Bit Packaging
 
-This repository contains Docker images used to build Linux packages of Fluent Bit for different distros, the following table describe the supported platforms:
+This repository contains Docker files used to build [Fluent Bit](http://fluentbit.io) Linux packages for different distros, the following table describe the supported targets:
 
 | Distro       |   Version / Code Name  | Arch   | Target Option          |
 |--------------|------------------------|--------|------------------------|
@@ -22,3 +22,9 @@ Details about the script parameters:
 |-------------|--------------------------|------------------------|
 | VERSION     | Github branch name or version number | 0.10.1     |
 | TARGET      | Target platform for the packages | ubuntu/16.10   |
+
+Build example:
+
+```
+$ ./build.sh 0.10.1 ubuntu/16.10
+```
