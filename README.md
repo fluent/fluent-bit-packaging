@@ -9,7 +9,6 @@ This repository contains Docker files used to build [Fluent Bit](http://fluentbi
 | Ubuntu       |   16.10 / Yakkety Yak  | amd64  | ubuntu/16.10            |
 | Ubuntu       |   16.04 / Xenial Xerus | amd64  | ubuntu/16.04            |
 | Raspbian     |   8.x / Jessie         | armhf  | raspbian/jessie         |
-| Kubernetes   |   N/A                  | amd64  | kubernetes/forwarder-dev|
 
 ## Usage
 
@@ -33,7 +32,7 @@ Optionally the script supports the option __-b__ to specify a custom branch, thi
 #### Package version 0.11.1 for Ubuntu 16.10:
 
 ```
-$ ./build.sh 0.10.1 ubuntu/16.10
+$ ./build.sh 0.11.1 ubuntu/16.10
 ```
 
 #### Package master branch for Ubuntu 16.10:
