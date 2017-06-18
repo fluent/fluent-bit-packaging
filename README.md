@@ -5,7 +5,8 @@ This repository contains Docker files used to build [Fluent Bit](http://fluentbi
 | Distro       |   Version / Code Name  | Arch   | Target Option           |
 |--------------|------------------------|--------|-------------------------|
 | CentOS       |   7                    | amd64  | centos/7                |
-| Fedora       |   25                   | amd64  | fedora/25               |
+| Debian       |   8                    | amd64  | debian/jessie           |
+| Debian       |   9                    | amd64  | debian/stretch          |
 | Ubuntu       |   16.10 / Yakkety Yak  | amd64  | ubuntu/16.10            |
 | Ubuntu       |   16.04 / Xenial Xerus | amd64  | ubuntu/16.04            |
 | Raspbian     |   8.x / Jessie         | armhf  | raspbian/jessie         |
