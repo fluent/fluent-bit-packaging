@@ -2,14 +2,14 @@
 
 This repository contains Docker files used to build [Fluent Bit](http://fluentbit.io) Linux packages for different distros, the following table describe the supported targets:
 
-| Distro       |   Version / Code Name  | Arch   | Target Option           |
-|--------------|------------------------|--------|-------------------------|
-| CentOS       |   7                    | amd64  | centos/7                |
-| Debian       |   8                    | amd64  | debian/jessie           |
-| Debian       |   9                    | amd64  | debian/stretch          |
-| Ubuntu       |   16.10 / Yakkety Yak  | amd64  | ubuntu/16.10            |
-| Ubuntu       |   16.04 / Xenial Xerus | amd64  | ubuntu/16.04            |
-| Raspbian     |   8.x / Jessie         | armhf  | raspbian/jessie         |
+| Distro       |   Version / Code Name   | Arch   | Target Option           |
+|--------------|-------------------------|--------|-------------------------|
+| CentOS       |   7                     | amd64  | centos/7                |
+| Debian       |   8                     | amd64  | debian/jessie           |
+| Debian       |   9                     | amd64  | debian/stretch          |
+| Ubuntu       |   16.04 / Xenial Xerus  | amd64  | ubuntu/16.04            |
+| Ubuntu       |   18.04 / Bionic Beaver | amd64  | ubuntu/18.04            |
+| Raspbian     |   8.x / Jessie          | armhf  | raspbian/jessie         |
 
 ## Usage
 
