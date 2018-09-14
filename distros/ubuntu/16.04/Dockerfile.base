@@ -1,0 +1,6 @@
+FROM ubuntu:16.04
+ENV DEBIAN_FRONTEND noninteractive
+
+RUN apt-get -qq update && \
+    apt-get install -y -qq curl ca-certificates build-essential libsystemd-dev cmake make bash sudo wget unzip nano vim valgrind dh-make && \
+    apt-get install -y -qq --reinstall lsb-base lsb-release
