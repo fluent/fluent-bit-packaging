@@ -68,6 +68,12 @@ docker build \
 # Compile and package
 docker run -e FLB_PREFIX=$FLB_PREFIX -e FLB_VERSION=$FLB_VERSION -v $volume:/output "flb-$FLB_VERSION-$FLB_DISTRO"
 
+
+# Delete temporal Build image
+if [ ! -z $(docker images -q flb-$FLB_VERSION-$FLB_DISTRO) ]; then
+    docker rmi -f flb-$FLB_VERSION-$FLB_DISTRO
+fi
+
 echo
 echo "Package(s) generated at: $volume"
 echo
