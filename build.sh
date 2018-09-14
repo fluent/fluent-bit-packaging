@@ -66,7 +66,7 @@ docker build \
        -t "flb-$FLB_VERSION-$FLB_DISTRO" "distros/$FLB_DISTRO"
 
 # Compile and package
-docker run -e FLB_VERSION=$FLB_VERSION -v $volume:/output "flb-$FLB_VERSION-$FLB_DISTRO"
+docker run -e FLB_PREFIX=$FLB_PREFIX -e FLB_VERSION=$FLB_VERSION -v $volume:/output "flb-$FLB_VERSION-$FLB_DISTRO"
 
 echo
 echo "Package(s) generated at: $volume"
