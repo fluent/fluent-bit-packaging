@@ -9,7 +9,8 @@ This repository contains Docker files used to build [Fluent Bit](http://fluentbi
 | Debian       |   9                     | amd64  | debian/stretch          |
 | Ubuntu       |   16.04 / Xenial Xerus  | amd64  | ubuntu/16.04            |
 | Ubuntu       |   18.04 / Bionic Beaver | amd64  | ubuntu/18.04            |
-| Raspbian     |   8.x / Jessie          | armhf  | raspbian/jessie         |
+| Raspbian     |   8 / Jessie            | armhf  | raspbian/jessie         |
+| Raspbian     |   9 / Stretch           | armhf  | raspbian/stretch        |
 
 ## Usage
 
@@ -23,21 +24,21 @@ Details about the script parameters:
 
 | Name        | Description                  | Example                |
 |-------------|------------------------------|------------------------|
-| VERSION     | Github Tag or version number | 0.13.7                 |
-| TARGET      | Target platform for the packages | ubuntu/16.10   |
+| VERSION     | Github Tag or version number | 0.14.x                 |
+| TARGET      | Target platform for the packages | ubuntu/18.04       |
 
 Optionally the script supports the option __-b__ to specify a custom branch, this is useful to package and test _master_ or specific branches.
 
 ### Build examples
 
-#### Package version 0.11.1 for Ubuntu 16.10:
+#### Package version 0.14.2 for Ubuntu 18.04:
 
 ```
-$ ./build.sh 0.11.1 ubuntu/16.10
+$ ./build.sh 0.14.2 ubuntu/18.10
 ```
 
-#### Package master branch for Ubuntu 16.10:
+#### Package master branch for Ubuntu 18.04:
 
 ```
-$ ./build.sh -b master ubuntu/16.10
+$ ./build.sh -b master ubuntu/18.04
 ```
