@@ -30,6 +30,19 @@ else
     FLB_DISTRO=$3
 fi
 
+# Validate 'Base Docker' image used to build the package
+FLB_BASE=flb-build-base-$FLB_DISTRO
+
+if [ -z $(docker images -q $FLB_BASE) ]; then
+    # Base image not found, build it
+    echo "Base Docker image $FLB_BASE not found"
+    docker build \
+           -t "$FLB_BASE" \
+           -f "$PWD/distros/$FLB_DISTRO/Dockerfile.base" \
+           distros/$FLB_DISTRO/
+else
+    echo "Base Docker image $FLB_BASE found, using cached image"
+fi
 
 # Prepare output directory
 out_dir=`date '+%Y-%m-%d-%H_%M_%S'`
