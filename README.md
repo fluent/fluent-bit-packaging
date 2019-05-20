@@ -11,6 +11,7 @@ This repository contains Docker files used to build [Fluent Bit](http://fluentbi
 | Ubuntu       |   18.04 / Bionic Beaver | amd64  | ubuntu/18.04            |
 | Raspbian     |   8 / Jessie            | armhf  | raspbian/jessie         |
 | Raspbian     |   9 / Stretch           | armhf  | raspbian/stretch        |
+| openSUSE     |   15 / Leap             | amd64  | opensuse/leap           |
 
 ## Usage
 
