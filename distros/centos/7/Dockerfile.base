@@ -1,7 +1,7 @@
 FROM centos:7
 
 RUN yum -y update && \
-    yum install -y rpm-build curl ca-certificates gcc gcc-c++ cmake make bash wget unzip systemd-devel wget flex bison && \
+    yum install -y rpm-build curl ca-certificates gcc gcc-c++ cmake make bash wget unzip zlib-devel systemd-devel wget flex bison && \
     wget http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm && \
     rpm -ivh epel-release-latest-7.noarch.rpm && \
     yum install -y cmake3
