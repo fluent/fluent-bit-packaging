@@ -37,6 +37,11 @@ if [ -z $(docker images -q $FLB_BASE) ]; then
            -t "$FLB_BASE" \
            -f "$PWD/distros/$FLB_DISTRO/Dockerfile.base" \
            distros/$FLB_DISTRO/
+    ret=$?
+    if (test $ret -ne 0); then
+	echo "Error building base docker image"
+	exit $ret
+    fi
 else
     echo "Base Docker image $FLB_BASE found, using cached image"
 fi
@@ -77,6 +82,11 @@ docker build \
        --build-arg FLB_PREFIX=$FLB_PREFIX \
        $FLB_ARG \
        -t "flb-$FLB_VERSION-$FLB_DISTRO" "distros/$FLB_DISTRO"
+ret=$?
+if (test $ret -ne 0); then
+    echo "Error building base docker image flb-$FLB_VERSION-$FLB_DISTRO"
+    exit $ret
+fi
 
 # Compile and package
 docker run \
@@ -85,6 +95,11 @@ docker run \
        -e FLB_SRC=$FLB_TARGZ \
        -v $volume:/output \
        "flb-$FLB_VERSION-$FLB_DISTRO"
+ret=$?
+if (test $ret -ne 0); then
+    echo "Could not compile on image flb-$FLB_VERSION-$FLB_DISTRO"
+    exit $ret
+fi
 
 # Delete temporal Build image
 if [ ! -z $(docker images -q flb-$FLB_VERSION-$FLB_DISTRO) ]; then
