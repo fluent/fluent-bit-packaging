@@ -1,0 +1,39 @@
+{
+    "pipeline": "td-agent-bit",
+    "version": "$VERSION",
+    "log_dir": "logs",
+    "jobs": [
+        {
+            "name": "centos/7",
+            "exec": "./build.sh -v $VERSION -d centos/7"
+        },
+        {
+            "name": "debian/jessie",
+            "exec": "./build.sh -v $VERSION -d debian/jessie"
+        },
+        {
+            "name": "debian/stretch",
+            "exec": "./build.sh -v $VERSION -d debian/stretch"
+        },
+        {
+            "name": "debian/buster",
+            "exec": "./build.sh -v $VERSION -d debian/buster"
+        },
+        {
+            "name": "ubuntu/16.04",
+            "exec": "./build.sh -v $VERSION -d ubuntu/16.04"
+        },
+        {
+            "name": "ubuntu/18.04",
+            "exec": "./build.sh -v $VERSION -d ubuntu/18.04"
+        },
+        {
+            "name": "raspbian/jessie",
+            "exec": "./build.sh -v $VERSION -d raspbian/jessie"
+        },
+        {
+            "name": "raspbian/stretch",
+            "exec": "./build.sh -v $VERSION -d raspbian/stretch"
+        }
+    ]
+}
