@@ -1,0 +1,10 @@
+FROM centos:6
+
+RUN yum -y update && \
+    yum install -y rpm-build curl ca-certificates gcc gcc-c++ cmake3 make bash wget unzip systemd-devel wget flex && \
+    mkdir -p /tmp/bison && cd /tmp/bison && \
+    curl -Lk http://ftp.gnu.org/gnu/bison/bison-3.0.4.tar.xz|tar xJ -C /tmp/bison --strip-components=1 && \
+    ./configure && make -j$(getconf _NPROCESSORS_ONLN) && make install && \
+    wget http://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm && \
+    rpm -ivh epel-release-latest-6.noarch.rpm && \
+    yum install -y cmake3
