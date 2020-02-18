@@ -4,6 +4,10 @@
     "log_dir": "logs",
     "jobs": [
         {
+            "name": "amazonlinux/2",
+            "exec": "./build.sh -v $VERSION -d amazonlinux/2"
+        },
+        {
             "name": "centos/7",
             "exec": "./build.sh -v $VERSION -d centos/7"
         },
