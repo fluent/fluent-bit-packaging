@@ -2,18 +2,24 @@
 
 This repository contains Docker files used to build [Fluent Bit](http://fluentbit.io) Linux packages for different distros, the following table describe the supported targets:
 
-| Distro       |   Version / Code Name   | Arch   | Target Option           |
-|--------------|-------------------------|--------|-------------------------|
-| AmazonLinux  |   2                     | amd64  | amazonlinux/2                    
-| CentOS       |   7                     | amd64  | centos/7                |
-| Debian       |   8                     | amd64  | debian/jessie           |
-| Debian       |   9                     | amd64  | debian/stretch          |
-| Debian       |   10                    | amd64  | debian/buster           |
-| Ubuntu       |   16.04 / Xenial Xerus  | amd64  | ubuntu/16.04            |
-| Ubuntu       |   18.04 / Bionic Beaver | amd64  | ubuntu/18.04            |
-| Raspbian     |   8 / Jessie            | armhf  | raspbian/jessie         |
-| Raspbian     |   9 / Stretch           | armhf  | raspbian/stretch        |
-| openSUSE     |   15 / Leap             | amd64  | opensuse/leap           |
+| Distro       |   Version / Code Name   | Arch    | Target Option           |
+|--------------|-------------------------|---------|-------------------------|
+| AmazonLinux  |   2                     | x86_64  | amazonlinux/2           |
+| AmazonLinux  |   2                     | arm64v8 | amazonlinux/2.arm64v8   |
+| CentOS       |   7                     | x86_64  | centos/7                |
+| CentOS       |   7                     | arm64v8 | centos/7.arm64v8        |
+| Debian       |   8                     | x86_64  | debian/jessie           |
+| Debian       |   8                     | arm64v8 | debian/jessie.arm64v8   |
+| Debian       |   9                     | x86_64  | debian/stretch          |
+| Debian       |   9                     | arm64v8 | debian/stretch.arm64v8  |
+| Debian       |   10                    | x86_64  | debian/buster           |
+| Debian       |   10                    | arm64v8 | debian/buster.arm64v8   |
+| Ubuntu       |   16.04 / Xenial Xerus  | x86_64  | ubuntu/16.04            |
+| Ubuntu       |   18.04 / Bionic Beaver | x86_64  | ubuntu/18.04            |
+| Raspbian     |   8 / Jessie            | arm32v7 | raspbian/jessie         |
+| Raspbian     |   9 / Stretch           | arm32v7 | raspbian/stretch        |
+| Raspbian     |   10 / Buster           | arm32v7 | raspbian/buster         |
+| openSUSE     |   15 / Leap             | x86_64  | opensuse/leap           |
 
 ## Usage
 
@@ -37,6 +43,5 @@ Optionally the script supports the option __-b__ to specify a custom branch, thi
 #### Package version 1.3.1 for Ubuntu 18.04:
 
 ```
-$ ./build.sh -v 1.3.1 ubuntu/18.04
+$ ./build.sh -v 1.3.1 -d ubuntu/18.04
 ```
-
