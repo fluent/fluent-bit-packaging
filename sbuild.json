@@ -8,20 +8,40 @@
             "exec": "./build.sh -v $VERSION -d amazonlinux/2"
         },
         {
+            "name": "amazonlinux/2.arm64v8",
+            "exec": "./build.sh -v $VERSION -d amazonlinux/2.arm64v8"
+        },
+        {
             "name": "centos/7",
             "exec": "./build.sh -v $VERSION -d centos/7"
+        },
+        {
+            "name": "centos/7.arm64v8",
+            "exec": "./build.sh -v $VERSION -d centos/7.arm64v8"
         },
         {
             "name": "debian/jessie",
             "exec": "./build.sh -v $VERSION -d debian/jessie"
         },
         {
+            "name": "debian/jessie.arm64v8",
+            "exec": "./build.sh -v $VERSION -d debian/jessie.arm64v8"
+        },
+        {
             "name": "debian/stretch",
             "exec": "./build.sh -v $VERSION -d debian/stretch"
         },
         {
+            "name": "debian/stretch.arm64v8",
+            "exec": "./build.sh -v $VERSION -d debian/stretch.arm64v8"
+        },
+        {
             "name": "debian/buster",
             "exec": "./build.sh -v $VERSION -d debian/buster"
+        },
+        {
+            "name": "debian/buster.arm64v8",
+            "exec": "./build.sh -v $VERSION -d debian/buster.arm64v8"
         },
         {
             "name": "ubuntu/16.04",
@@ -38,6 +58,10 @@
         {
             "name": "raspbian/stretch",
             "exec": "./build.sh -v $VERSION -d raspbian/stretch"
+        }
+        {
+            "name": "raspbian/buster",
+            "exec": "./build.sh -v $VERSION -d raspbian/buster"
         }
     ]
 }
