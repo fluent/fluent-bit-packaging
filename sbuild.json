@@ -58,7 +58,7 @@
         {
             "name": "raspbian/stretch",
             "exec": "./build.sh -v $VERSION -d raspbian/stretch"
-        }
+        },
         {
             "name": "raspbian/buster",
             "exec": "./build.sh -v $VERSION -d raspbian/buster"
