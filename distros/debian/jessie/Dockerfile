@@ -14,6 +14,7 @@ RUN cd /tmp && \
     cmake  -DCMAKE_INSTALL_PREFIX=/opt/td-agent-bit/ -DCMAKE_INSTALL_SYSCONFDIR=/etc/ \
            -DFLB_DEBUG=On -DFLB_TRACE=On -DFLB_TD=On \
            -DFLB_SQLDB=On -DFLB_HTTP_SERVER=On \
-           -DFLB_OUT_KAFKA=On ../
+           -DFLB_OUT_KAFKA=On \
+           -DFLB_OUT_PGSQL=On ../
 
 CMD cd "/tmp/fluent-bit-${FLB_VERSION}/build/" && make -j 2 && cpack -G DEB && cp *.deb /output
