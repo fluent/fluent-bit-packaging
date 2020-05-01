@@ -52,8 +52,16 @@
             "exec": "./build.sh -v $VERSION -d ubuntu/18.04"
         },
         {
+            "name": "ubuntu/18.04.arm64v8",
+            "exec": "./build.sh -v $VERSION -d ubuntu/18.04.arm64v8"
+        },
+        {
             "name": "ubuntu/20.04",
             "exec": "./build.sh -v $VERSION -d ubuntu/20.04"
+        },
+        {
+            "name": "ubuntu/20.04.arm64v8",
+            "exec": "./build.sh -v $VERSION -d ubuntu/20.04.arm64v8"
         },
         {
             "name": "raspbian/jessie",
