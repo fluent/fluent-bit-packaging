@@ -5,8 +5,8 @@ RUN sed -i '/deb http:\/\/deb.debian.org\/debian jessie-updates main/d' /etc/apt
     printf "deb http://archive.debian.org/debian/ jessie main\ndeb-src http://archive.debian.org/debian/ jessie main\n" > /etc/apt/sources.list && \
     printf "deb http://archive.debian.org/debian/ jessie-backports main contrib non-free\n" >> /etc/apt/sources.list && \
     apt-get -o Acquire::Check-Valid-Until=false update && \
-    apt-get install -y curl ca-certificates build-essential libsystemd-dev make \
+    apt-get install --force-yes curl ca-certificates build-essential libsystemd-dev make \
             bash sudo wget unzip dh-make flex bison libssl1.0.0 libssl-dev \
             libpq-dev postgresql-server-dev-all && \
-    apt-get install -y --reinstall lsb-base lsb-release && \
-    apt install -t jessie-backports cmake
+    apt-get install --force-yes --reinstall lsb-base lsb-release && \
+    apt install --force-yes -t jessie-backports cmake

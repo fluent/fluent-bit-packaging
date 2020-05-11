@@ -1,4 +1,4 @@
-FROM flb-build-base-debian/jessie.aarch64
+FROM flb-build-base-debian/jessie.arm64v8
 
 ARG FLB_PREFIX
 ARG FLB_VERSION
