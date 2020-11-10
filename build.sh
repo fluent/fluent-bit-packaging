@@ -13,6 +13,7 @@ do
             d) FLB_DISTRO=${OPTARG};;
             b) FLB_BRANCH=${OPTARG};;
             t) FLB_TARGZ=${OPTARG};;
+            o) FLB_OUT_DIR=${OPTARG};;
         esac
 done
 
@@ -47,7 +48,12 @@ else
 fi
 
 # Prepare output directory
-out_dir=`date '+%Y-%m-%d-%H_%M_%S'`
+if [ -n "$FLB_OUT_DIR" ]; then
+    out_dir=$FLB_OUT_DIR
+else
+    out_dir=`date '+%Y-%m-%d-%H_%M_%S'`
+fi
+
 volume=`pwd`/packages/$FLB_DISTRO/$FLB_VERSION/$out_dir/
 sources=`pwd`/distros/$FLB_DISTRO/sources/
 mkdir -p $volume

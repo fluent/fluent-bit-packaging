@@ -5,75 +5,75 @@
     "jobs": [
         {
             "name": "amazonlinux/2",
-            "exec": "./build.sh -v $VERSION -d amazonlinux/2"
+            "exec": "./build.sh -v $VERSION -d amazonlinux/2 -o $SBUILD_DATE"
         },
         {
             "name": "amazonlinux/2.arm64v8",
-            "exec": "./build.sh -v $VERSION -d amazonlinux/2.arm64v8"
+            "exec": "./build.sh -v $VERSION -d amazonlinux/2.arm64v8 -o $SBUILD_DATE"
         },
         {
             "name": "centos/7",
-            "exec": "./build.sh -v $VERSION -d centos/7"
+            "exec": "./build.sh -v $VERSION -d centos/7 -o $SBUILD_DATE"
         },
         {
             "name": "centos/7.arm64v8",
-            "exec": "./build.sh -v $VERSION -d centos/7.arm64v8"
+            "exec": "./build.sh -v $VERSION -d centos/7.arm64v8 -o $SBUILD_DATE"
         },
         {
             "name": "debian/jessie",
-            "exec": "./build.sh -v $VERSION -d debian/jessie"
+            "exec": "./build.sh -v $VERSION -d debian/jessie -o $SBUILD_DATE"
         },
         {
             "name": "debian/jessie.arm64v8",
-            "exec": "./build.sh -v $VERSION -d debian/jessie.arm64v8"
+            "exec": "./build.sh -v $VERSION -d debian/jessie.arm64v8 -o $SBUILD_DATE"
         },
         {
             "name": "debian/stretch",
-            "exec": "./build.sh -v $VERSION -d debian/stretch"
+            "exec": "./build.sh -v $VERSION -d debian/stretch -o $SBUILD_DATE"
         },
         {
             "name": "debian/stretch.arm64v8",
-            "exec": "./build.sh -v $VERSION -d debian/stretch.arm64v8"
+            "exec": "./build.sh -v $VERSION -d debian/stretch.arm64v8 -o $SBUILD_DATE"
         },
         {
             "name": "debian/buster",
-            "exec": "./build.sh -v $VERSION -d debian/buster"
+            "exec": "./build.sh -v $VERSION -d debian/buster -o $SBUILD_DATE"
         },
         {
             "name": "debian/buster.arm64v8",
-            "exec": "./build.sh -v $VERSION -d debian/buster.arm64v8"
+            "exec": "./build.sh -v $VERSION -d debian/buster.arm64v8 -o $SBUILD_DATE"
         },
         {
             "name": "ubuntu/16.04",
-            "exec": "./build.sh -v $VERSION -d ubuntu/16.04"
+            "exec": "./build.sh -v $VERSION -d ubuntu/16.04 -o $SBUILD_DATE"
         },
         {
             "name": "ubuntu/18.04",
-            "exec": "./build.sh -v $VERSION -d ubuntu/18.04"
+            "exec": "./build.sh -v $VERSION -d ubuntu/18.04 -o $SBUILD_DATE"
         },
         {
             "name": "ubuntu/18.04.arm64v8",
-            "exec": "./build.sh -v $VERSION -d ubuntu/18.04.arm64v8"
+            "exec": "./build.sh -v $VERSION -d ubuntu/18.04.arm64v8 -o $SBUILD_DATE"
         },
         {
             "name": "ubuntu/20.04",
-            "exec": "./build.sh -v $VERSION -d ubuntu/20.04"
+            "exec": "./build.sh -v $VERSION -d ubuntu/20.04 -o $SBUILD_DATE"
         },
         {
             "name": "ubuntu/20.04.arm64v8",
-            "exec": "./build.sh -v $VERSION -d ubuntu/20.04.arm64v8"
+            "exec": "./build.sh -v $VERSION -d ubuntu/20.04.arm64v8 -o $SBUILD_DATE"
         },
         {
             "name": "raspbian/jessie",
-            "exec": "./build.sh -v $VERSION -d raspbian/jessie"
+            "exec": "./build.sh -v $VERSION -d raspbian/jessie -o $SBUILD_DATE"
         },
         {
             "name": "raspbian/stretch",
-            "exec": "./build.sh -v $VERSION -d raspbian/stretch"
+            "exec": "./build.sh -v $VERSION -d raspbian/stretch -o $SBUILD_DATE"
         },
         {
             "name": "raspbian/buster",
-            "exec": "./build.sh -v $VERSION -d raspbian/buster"
+            "exec": "./build.sh -v $VERSION -d raspbian/buster -o $SBUILD_DATE"
         }
     ]
 }
