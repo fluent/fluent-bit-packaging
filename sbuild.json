@@ -1,5 +1,5 @@
 {
-    "pipeline": "td-agent-bit",
+    "pipeline": "fluent-bit",
     "version": "$VERSION",
     "log_dir": "logs",
     "jobs": [
