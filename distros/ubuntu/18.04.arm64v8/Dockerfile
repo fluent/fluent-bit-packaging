@@ -12,7 +12,7 @@ RUN cd /tmp && \
     cd "fluent-bit-$FLB_VERSION/build/" && \
     export CFLAGS="$CFLAGS -std=gnu99" && \
     cmake  -DCMAKE_INSTALL_PREFIX=/opt/td-agent-bit/ -DCMAKE_INSTALL_SYSCONFDIR=/etc/ \
-           -DFLB_DEBUG=On -DFLB_TRACE=On -DFLB_TD=On \
+           -DFLB_RELEASE=On -DFLB_TRACE=On -DFLB_TD=On \
            -DFLB_SQLDB=On -DFLB_HTTP_SERVER=On \
            -DFLB_OUT_KAFKA=On \
            -DFLB_OUT_PGSQL=On ../

@@ -11,7 +11,7 @@ RUN cd /tmp && \
     if [ "x$FLB_SRC" = "x" ] ; then wget -O "/tmp/fluent-bit-${FLB_VERSION}.zip" ${FLB_TARBALL} && unzip "fluent-bit-$FLB_VERSION.zip" ; else tar zxfv "/$FLB_SRC" ; fi && \
     cd "/tmp/fluent-bit-${FLB_VERSION}/build" && \
     export CFLAGS="$CFLAGS -std=gnu99" && \
-    cmake -DFLB_DEBUG=On -DFLB_TRACE=On -DFLB_TD=On \
+    cmake -DFLB_RELEASE=On -DFLB_TRACE=On -DFLB_TD=On \
           -DFLB_BUFFERING=On -DFLB_SQLDB=On -DFLB_HTTP_SERVER=On \
           -DFLB_OUT_KAFKA=On \
           -DFLB_OUT_PGSQL=On ../
