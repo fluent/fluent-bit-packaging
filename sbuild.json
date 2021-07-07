@@ -20,14 +20,6 @@
             "exec": "./build.sh -v $VERSION -d centos/7.arm64v8 -o $SBUILD_DATE"
         },
         {
-            "name": "debian/jessie",
-            "exec": "./build.sh -v $VERSION -d debian/jessie -o $SBUILD_DATE"
-        },
-        {
-            "name": "debian/jessie.arm64v8",
-            "exec": "./build.sh -v $VERSION -d debian/jessie.arm64v8 -o $SBUILD_DATE"
-        },
-        {
             "name": "debian/stretch",
             "exec": "./build.sh -v $VERSION -d debian/stretch -o $SBUILD_DATE"
         },
