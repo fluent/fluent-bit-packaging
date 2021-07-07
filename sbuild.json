@@ -64,14 +64,6 @@
             "exec": "./build.sh -v $VERSION -d ubuntu/20.04.arm64v8 -o $SBUILD_DATE"
         },
         {
-            "name": "raspbian/jessie",
-            "exec": "./build.sh -v $VERSION -d raspbian/jessie -o $SBUILD_DATE"
-        },
-        {
-            "name": "raspbian/stretch",
-            "exec": "./build.sh -v $VERSION -d raspbian/stretch -o $SBUILD_DATE"
-        },
-        {
             "name": "raspbian/buster",
             "exec": "./build.sh -v $VERSION -d raspbian/buster -o $SBUILD_DATE"
         }
