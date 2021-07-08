@@ -15,4 +15,4 @@ RUN cd /tmp && \
            -DFLB_SQLDB=On -DFLB_HTTP_SERVER=On \
            -DFLB_OUT_KAFKA=On ../
 
-CMD cd "/tmp/fluent-bit-${FLB_VERSION}/build/" && make -j 2 && cpack -G RPM && cp *.rpm /output/
+CMD cd "/tmp/fluent-bit-${FLB_VERSION}/build/" && make -j 4 && cpack3 -G RPM && cp *.rpm /output/
