@@ -6,5 +6,5 @@ RUN apt-get -qq update && \
                            cmake make bash sudo wget unzip dh-make \
                            libsystemd-dev zlib1g-dev flex bison \
                            libssl1.1 libssl-dev libpq-dev postgresql-server-dev-all \
-                           libsasl2-2 libsasl2-dev openssl libssl-dev libssl1.1 && \
+                           libsasl2-2 libsasl2-dev && \
     apt-get install -y -qq --reinstall lsb-base lsb-release
