@@ -14,14 +14,10 @@ This repository contains Docker files used to build [Fluent Bit](http://fluentbi
 | Debian       |   10                    | arm64v8 | debian/buster.arm64v8   |
 | Debian       |   9                     | x86_64  | debian/stretch          |
 | Debian       |   9                     | arm64v8 | debian/stretch.arm64v8  |
-| Debian       |   8                     | x86_64  | debian/jessie           |
-| Debian       |   8                     | arm64v8 | debian/jessie.arm64v8   |
 | Ubuntu       |   20.04 / Focal Fossa   | x86_64  | ubuntu/20.04            |
 | Ubuntu       |   18.04 / Bionic Beaver | x86_64  | ubuntu/18.04            |
 | Ubuntu       |   16.04 / Xenial Xerus  | x86_64  | ubuntu/16.04            |
 | Raspbian     |   10 / Buster           | arm32v7 | raspbian/buster         |
-| Raspbian     |   9 / Stretch           | arm32v7 | raspbian/stretch        |
-| Raspbian     |   8 / Jessie            | arm32v7 | raspbian/jessie         |
 | openSUSE     |   15 / Leap             | x86_64  | opensuse/leap           |
 
 ## Usage
