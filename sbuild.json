@@ -36,6 +36,14 @@
             "exec": "./build.sh -v $VERSION -d debian/buster.arm64v8 -o $SBUILD_DATE"
         },
         {
+            "name": "debian/bullseye",
+            "exec": "./build.sh -v $VERSION -d debian/bullseye -o $SBUILD_DATE"
+        },
+        {
+            "name": "debian/bullseye.arm64v8",
+            "exec": "./build.sh -v $VERSION -d debian/bullseye.arm64v8 -o $SBUILD_DATE"
+        },
+        {
             "name": "ubuntu/16.04",
             "exec": "./build.sh -v $VERSION -d ubuntu/16.04 -o $SBUILD_DATE"
         },
@@ -58,6 +66,10 @@
         {
             "name": "raspbian/buster",
             "exec": "./build.sh -v $VERSION -d raspbian/buster -o $SBUILD_DATE"
+        },
+        {
+            "name": "raspbian/bullseye",
+            "exec": "./build.sh -v $VERSION -d raspbian/bullseye -o $SBUILD_DATE"
         }
     ]
 }
