@@ -1,10 +1,6 @@
-# Use deprecated image as it pins dependencies to working ones.
-# Current balenalib/rpi-raspbian:buster triggers cmake failures for GNU C compiler detection
-FROM resin/rpi-raspbian:buster
+FROM debian:bullseye-slim as builder
 ENV DEBIAN_FRONTEND noninteractive
 
-# Builder image so dependencies can be latest, recommended and no need to wipe
-# hadolint ignore=DL3008,DL3015,DL3009
 RUN apt-get -qq update && \
     apt-get install -y -qq curl ca-certificates build-essential \
                            cmake make bash sudo wget unzip dh-make \
@@ -30,4 +26,4 @@ RUN cd /tmp && \
            -DFLB_OUT_KAFKA=On \
            -DFLB_OUT_PGSQL=On ../
 
-CMD cd "/tmp/fluent-bit-${FLB_VERSION}/build/" && make -j 2 && cpack -G DEB && cp *.deb /output
+CMD cd "/tmp/fluent-bit-${FLB_VERSION}/build/" && make && cpack -G DEB && cp *.deb /output
