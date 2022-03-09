@@ -1,5 +1,13 @@
 # Fluent Bit Packaging
 
+---
+**IMPORTANT**
+
+This repository is deprecated and only used for 1.8 builds of Fluent Bit.
+More recent builds use [equivalent functionality](https://github.com/fluent/fluent-bit/tree/master/packaging) in the official Fluent Bit repo.
+
+---
+
 This repository contains Docker files used to build [Fluent Bit](http://fluentbit.io) Linux packages for different distros, the following table describe the supported targets:
 
 | Distro       |   Version / Code Name   | Arch    | Target Option           |
