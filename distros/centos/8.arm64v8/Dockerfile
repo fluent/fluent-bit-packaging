@@ -13,6 +13,7 @@ RUN cd /tmp && \
     cmake3 -DCMAKE_INSTALL_PREFIX=/opt/td-agent-bit/ -DCMAKE_INSTALL_SYSCONFDIR=/etc/ \
            -DFLB_RELEASE=On -DFLB_TRACE=On -DFLB_TD=On \
            -DFLB_SQLDB=On -DFLB_HTTP_SERVER=On \
+           -DFLB_JEMALLOC_OPTIONS="--with-lg-page=16 --with-lg-quantum=3" \
            -DFLB_OUT_KAFKA=On ../
 
 CMD cd "/tmp/fluent-bit-${FLB_VERSION}/build/" && make -j 2 && cpack -G RPM && cp *.rpm /output/
